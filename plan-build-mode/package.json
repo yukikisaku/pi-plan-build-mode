@@ -1,0 +1,46 @@
+{
+  "name": "@yukikisaku/pi-plan-build-mode",
+  "version": "0.1.0",
+  "description": "Plan/build mode and named preset extensions for Pi",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./dist/plan-build-mode/index.ts",
+      "./dist/plan-build-preset/index.ts"
+    ]
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:package": "node scripts/build-package.mjs",
+    "test": "node --test test/mode-config.test.mjs test/mode-controller.test.mjs ../plan-build-preset/test/index.test.mjs",
+    "smoke:packed": "npm run build:package && node scripts/smoke-packed.mjs",
+    "check": "npm test && npm run smoke:packed && npm pack --dry-run",
+    "prepack": "npm run build:package"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "plan-mode",
+    "build-mode",
+    "preset"
+  ],
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukikisaku/pi-plan-build-mode.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
