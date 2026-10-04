@@ -83,3 +83,7 @@ Uninstalling the package does not delete `plan-build-mode.json` or legacy `plan-
 ## License
 
 MIT
+
+## Pull requests
+
+See the [repository policy](https://github.com/yukikisaku/pi-plan-build-mode#pull-requests) for AI review, automatic merge, and activation conditions.
