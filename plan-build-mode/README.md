@@ -86,4 +86,4 @@ MIT
 
 ## Pull requests
 
-See the [repository policy](https://github.com/yukikisaku/pi-plan-build-mode#pull-requests) for AI review, automatic merge, and activation conditions.
+Pull requests are reviewed by AI and automatically merged when the review and CI pass.
